@@ -2,8 +2,8 @@ import 'package:financy_app/common/constants/app_color.dart';
 import 'package:financy_app/common/constants/app_textStyle.dart';
 import 'package:flutter/material.dart';
 
-class SplashPageWidget extends StatelessWidget {
-  const SplashPageWidget({super.key});
+class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
 
   @override
   Widget build(BuildContext context) {
