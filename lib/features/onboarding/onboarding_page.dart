@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:financy_app/common/constants/app_color.dart';
 import 'package:financy_app/common/constants/app_textStyle.dart';
+import 'package:financy_app/common/widgets/custom_text_button_widget.dart';
 import 'package:financy_app/common/widgets/primary_button_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +20,6 @@ class OnBoardingPage extends StatelessWidget {
               height: 60,
             ),
             Expanded(
-              flex: 2,
               child: Image.asset(
                 'assets/images/man.png',
               ),
@@ -36,7 +38,12 @@ class OnBoardingPage extends StatelessWidget {
               height: 16,
             ),
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.only(
+                left: 32,
+                right: 32,
+                top: 16,
+                bottom: 2
+              ),
               child: PrimaryButton(
                 text: 'Get Started',
                 onPressed: () {},
@@ -45,13 +52,23 @@ class OnBoardingPage extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            Text(
-              'Already have account? Log In',
-              style: AppTextStyles.smallText.copyWith(
-                color: AppColors.grey,
-              ),
+            CustomTextButton(
+              children: [
+                Text(
+                  'Already have account?',
+                  style: AppTextStyles.smallText.copyWith(
+                    color: AppColors.grey,
+                  ),
+                ),
+                Text(
+                  ' Log In',
+                  style: AppTextStyles.smallText.copyWith(
+                    color: AppColors.grey,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             )
           ],
@@ -60,3 +77,5 @@ class OnBoardingPage extends StatelessWidget {
     );
   }
 }
+
+
