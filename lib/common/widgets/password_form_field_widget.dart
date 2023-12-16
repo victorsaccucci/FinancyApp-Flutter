@@ -32,10 +32,14 @@ class _PasswordFormField extends State<PasswordFormField> {
       labelText: widget.labelText,
       suffixIcon: InkWell(
         child: Icon(
-          Icons.visibility,          
+          isHidden ? Icons.visibility : Icons.visibility_off,          
         ),
         borderRadius: BorderRadius.circular(32),
-        onTap: (){},
+        onTap: (){
+          setState(() {
+            isHidden = !isHidden;
+          });
+        },
       ),
     );
   }
